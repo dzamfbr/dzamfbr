@@ -2286,7 +2286,7 @@ a {
 
   .contact-inner {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
     width: 100%;
     max-width: 100%;
   }
@@ -2299,29 +2299,13 @@ a {
   }
 
   .contact-headline {
-    font-size: clamp(2.2rem, 8vw, 3rem);
+    font-size: clamp(3rem, 10vw, 4.5rem);
     line-height: 0.95;
     overflow-wrap: anywhere;
   }
-}
 
-@media (max-width: 950px) {
   .headline-serif {
     font-size: 0.9em; /* larger relative serif on small screens */
-  }
-}
-
-@media (max-width: 950px) {
-  .contact-inner {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-  .contact-left,
-  .contact-right {
-    padding: 0;
-  }
-  .contact-headline {
-    font-size: clamp(2.4rem, 9vw, 3.6rem);
   }
 }
 
@@ -2331,7 +2315,7 @@ a {
   }
 
   .contact-headline {
-    font-size: clamp(1.95rem, 8vw, 2.6rem);
+    font-size: clamp(2.6rem, 12vw, 3.8rem);
   }
 
   .form-input,

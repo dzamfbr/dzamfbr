@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = "https://dzamfbr-portfolio.vercel.app";
+const siteUrl = "https://dzamfbr.my.id";
 const siteName = "Dzamfbr Portfolio";
 const siteTitle =
   "Dzamfbr Portfolio | Web Developer & Programmer from Indonesia";

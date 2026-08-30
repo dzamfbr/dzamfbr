@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     "msapplication-TileColor": "#0f172a",
   },
   verification: {
-    google: "TYcEMxZTJIN9tC00jnZcP48Y92puHkrbcyu4OTxETC4",
+    google: "aKhU8L1yQwyP-eVMJTNdVclbeNCx0tFHwavXih5q-zM",
   },
 };
 

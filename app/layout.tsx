@@ -3,10 +3,9 @@ import "./globals.css";
 
 const siteUrl = "https://dzamfbr.my.id";
 const siteName = "Dzamfbr Portfolio";
-const siteTitle =
-  "Dzamfbr Portfolio | Web Developer & Programmer from Indonesia";
+const siteTitle = "Dzamfbr Portfolio | Dimas Azzam - Web & Software Developer";
 const siteDescription =
-  "Dzamfbr Portfolio adalah portofolio resmi Dimas Azzam sebagai web developer dan programmer berbasis di Indonesia, menampilkan karya, skill, dan pengalaman teknologi.";
+  "Portofolio resmi Dimas Azzam, siswa SMK Negeri 1 Jakarta yang berfokus pada Software Development dan Web Development. Menampilkan karya, skill, proyek modern, dan pengalaman teknologi.";
 const defaultImage = `${siteUrl}/screenshoot_portofolio_web_dzamfbr.png`;
 const logoUrl = `${siteUrl}/logo_dzamfbr.png`;
 
@@ -23,16 +22,19 @@ export const metadata: Metadata = {
     "dimas azzam",
     "portfolio dzamfbr",
     "web developer indonesia",
+    "software developer indonesia",
+    "smk negeri 1 jakarta",
     "nextjs developer",
     "react developer",
     "programmer indonesia",
     "ui ux designer",
+    "frontend developer jakarta",
   ],
   authors: [{ name: "Dimas Azzam", url: siteUrl }],
   alternates: {
     canonical: siteUrl,
     languages: {
-      id: "/",
+      "id-ID": siteUrl,
     },
   },
   robots: {
@@ -47,7 +49,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    type: "website",
+    type: "profile",
     url: siteUrl,
     siteName,
     title: siteTitle,
@@ -58,7 +60,7 @@ export const metadata: Metadata = {
         url: defaultImage,
         width: 1200,
         height: 630,
-        alt: "Dzamfbr Portfolio landing page preview",
+        alt: "Dzamfbr Portfolio - Dimas Azzam Web & Software Developer",
       },
     ],
   },
@@ -93,88 +95,88 @@ export const metadata: Metadata = {
   },
 };
 
-const websiteSchema = {
+// Menggabungkan JSON-LD Terpadu dengan Skema Graph (Optimal untuk Google & AI Engine)
+const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: siteName,
-  alternateName: "Dzamfbr",
-  url: siteUrl,
-  inLanguage: "id-ID",
-  description: siteDescription,
-  publisher: {
-    "@id": `${siteUrl}/#organization`,
-  },
-};
-
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": `${siteUrl}/#organization`,
-  name: siteName,
-  url: siteUrl,
-  logo: logoUrl,
-  description: siteDescription,
-  sameAs: [
-    "https://www.instagram.com/dzamfbr/",
-    "https://github.com/dzamfbr",
-    "https://www.youtube.com/@rayoonn_5",
-  ],
-};
-
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Dimas Azzam",
-  alternateName: "Dzamfbr",
-  url: siteUrl,
-  jobTitle: "Web Developer",
-  description: siteDescription,
-  image: defaultImage,
-  sameAs: [
-    "https://www.instagram.com/dzamfbr/",
-    "https://github.com/dzamfbr",
-    "https://www.youtube.com/@rayoonn_5",
-  ],
-};
-
-const webPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: siteTitle,
-  url: siteUrl,
-  description: siteDescription,
-  inLanguage: "id-ID",
-  isPartOf: {
-    "@id": `${siteUrl}/#website`,
-  },
-  about: {
-    "@id": `${siteUrl}/#organization`,
-  },
-  primaryImageOfPage: {
-    "@id": `${siteUrl}/#primaryimage`,
-  },
-};
-
-const aboutPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  name: `About ${siteName}`,
-  url: siteUrl,
-  description: siteDescription,
-  mainEntity: {
-    "@id": `${siteUrl}/#person`,
-  },
-};
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
+  "@graph": [
     {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: siteUrl,
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: siteName,
+      alternateName: "Dzamfbr",
+      url: siteUrl,
+      inLanguage: "id-ID",
+      description: siteDescription,
+      publisher: {
+        "@id": `${siteUrl}/#person`,
+      },
+    },
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      name: "Dimas Azzam",
+      alternateName: ["Dzamfbr", "dzamfbr", "Dimas Azzam Portfolio"],
+      url: siteUrl,
+      jobTitle: ["Software Developer", "Web Developer"],
+      description:
+        "Siswa SMK Negeri 1 Jakarta yang berfokus pada Software Development dan Web Development. Berpengalaman dalam membangun aplikasi dan website modern yang mengutamakan performa, fungsionalitas, serta pengalaman pengguna yang optimal.",
+      image: defaultImage,
+      alumniOf: {
+        "@type": "EducationalOrganization",
+        name: "SMK Negeri 1 Jakarta",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Jakarta",
+          addressCountry: "ID",
+        },
+      },
+      knowsAbout: [
+        "Software Development",
+        "Web Development",
+        "Frontend Development",
+        "Next.js",
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "UI/UX Design",
+        "User Experience",
+        "Web Performance Optimization",
+      ],
+      sameAs: [
+        "https://www.instagram.com/dzamfbr/",
+        "https://github.com/dzamfbr",
+        "https://www.youtube.com/@rayoonn_5",
+      ],
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/#webpage`,
+      name: siteTitle,
+      url: siteUrl,
+      description: siteDescription,
+      inLanguage: "id-ID",
+      isPartOf: {
+        "@id": `${siteUrl}/#website`,
+      },
+      about: {
+        "@id": `${siteUrl}/#person`,
+      },
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        "@id": `${siteUrl}/#primaryimage`,
+        url: defaultImage,
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+      ],
     },
   ],
 };
@@ -191,31 +193,10 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
+        {/* Menyuntikkan 1 script JSON-LD terpadu untuk SEO & AI */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="min-h-full flex flex-col">{children}</body>

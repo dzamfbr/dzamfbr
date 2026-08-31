@@ -99,7 +99,7 @@ export function getNotificationEmailHtml(values: ContactFormData) {
           <p style="margin: 0 0 8px; font-size: 14px; color: #4b5563;">Reply directly to this email to respond to ${escapeHtml(values.name)}.</p>
           <p style="margin: 0; font-size: 14px; color: #4b5563;">
             Portfolio<br />
-            <a href="https://dzamfbr-portfolio.vercel.app" style="color: #2563eb; text-decoration: none;">https://dzamfbr-portfolio.vercel.app</a>
+            <a href="https://dzamfbr.my.id" style="color: #2563eb; text-decoration: none;">https://dzamfbr.my.id</a>
           </p>
         </div>
       </div>
@@ -116,7 +116,7 @@ export function getAutoReplyEmailHtml(name: string) {
       <p>I have successfully received your message and will review it as soon as possible.</p>
       <p>I'll get back to you as soon as I can.</p>
       <p>Best regards,</p>
-      <p><strong>Dimas Azzam</strong><br />Frontend Developer<br /><a href="https://dzamfbr-portfolio.vercel.app" style="color: #2563eb; text-decoration: none;">https://dzamfbr-portfolio.vercel.app</a></p>
+      <p><strong>Dimas Azzam</strong><br />Frontend Developer<br /><a href="https://dzamfbr.my.id" style="color: #2563eb; text-decoration: none;">https://dzamfbr.my.id</a></p>
     </div>
   `;
 }

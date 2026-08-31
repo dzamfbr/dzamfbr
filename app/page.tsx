@@ -315,7 +315,7 @@ export default function Home() {
             </div>
 
             <div className="about-card-stat about-card-stat--secondary">
-              <span className="about-card-number">0</span>
+              <span className="about-card-number">1</span>
               <span className="about-card-stat-title">Commercial Projects</span>
               <p className="about-card-stat-desc">
                 Proyek yang dikembangkan untuk kebutuhan nyata, baik untuk klien
